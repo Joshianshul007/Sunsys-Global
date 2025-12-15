@@ -7,7 +7,7 @@ const page = () => {
   return (
     <div>
       <Developers/>
-        
+        <Footer/>
     </div>
   )
 }
