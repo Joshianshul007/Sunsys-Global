@@ -1,4 +1,5 @@
 "use client";
+import Footer from "./Footer";
 export default function WhyUsPage() {
   return (
     <main
@@ -83,6 +84,7 @@ export default function WhyUsPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

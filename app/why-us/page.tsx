@@ -1,3 +1,5 @@
+import Footer from "@/components/Footer";
+
 export default function Services() {
   const services = [
     { icon: "🧑‍💻", title: "IT Staffing & Contract Hiring" },
@@ -9,6 +11,7 @@ export default function Services() {
   ];
 
   return (
+    <>
     <section className="w-full bg-[#0B0E11] text-white py-28">
       <div className="w-[90%] max-w-7xl mx-auto text-center">
 
@@ -25,5 +28,7 @@ export default function Services() {
 
       </div>
     </section>
+    <Footer />
+    </>
   );
 }

@@ -14,7 +14,7 @@ export default function Footer() {
           {/* Logo */}
           <div className="flex items-center gap-2">
             <Image
-              src="/logo.png"   // change if needed
+              src="/logo.jpg"   // change if needed
               width={45}
               height={45}
               alt="Sunsys Global Logo"

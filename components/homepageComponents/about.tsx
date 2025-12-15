@@ -3,7 +3,7 @@ import Reveal from "../animate";
 
 export default function About() {
   return (
-    <section className="w-full bg-[#0B0E11] text-white py-16">
+    <section className="w-full py-16">
       <Reveal from="left">
        <div className="section-container grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>

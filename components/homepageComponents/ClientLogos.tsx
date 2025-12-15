@@ -5,7 +5,7 @@ export default function ClientLogos() {
   const logos = ["Logo A", "Logo B", "Logo C", "Logo D"];
 
   return (
-    <section className="w-full bg-[#0B0E11] text-white py-12">
+    <section className="w-full  py-12">
       <Reveal from="right">
         <div className="section-container text-center">
 

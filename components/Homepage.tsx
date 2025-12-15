@@ -9,8 +9,8 @@ import ForEngineers from "./homepageComponents/ForEngineers";
 import ContactSection from "./homepageComponents/contactSect";
 import Footer from "./Footer";
 import Sidebar from "./Sidebar";
-import ClientLogos from "./homepageComponents/ClientLogos";
 import ProcessSection from "./homepageComponents/processSection";
+import TrustedCompanies from "./homepageComponents/trusted";
 
 
 export default function Homepage() {
@@ -26,7 +26,7 @@ export default function Homepage() {
       <Services />
       <WhyChoose />
       <ForEngineers />
-      <ClientLogos/>
+      <TrustedCompanies />
       <ProcessSection />
       <ContactSection />
 

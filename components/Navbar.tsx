@@ -45,7 +45,7 @@ const handleHireDevelopers = () => {
 
   return (
     <header className="fixed top-0 left-0 z-50 w-full bg-[#0B0E11] flex justify-center py-4 shadow-lg">
-      <div className="w-[90%] max-w-7xl h-20 border border-white/10 rounded-xl bg-[#0B0E11] flex items-center justify-between px-8">
+      <div className="w-[90%] max-w-full h-20 border border-white/10 rounded-xl bg-[#0B0E11] flex items-center justify-between px-8">
 
         {/* Logo */}
         <Link href="/" className="flex items-center">
@@ -83,6 +83,7 @@ const handleHireDevelopers = () => {
 
        
       </div>
+      
     </header>
   );
 }

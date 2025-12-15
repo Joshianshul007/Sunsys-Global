@@ -1,7 +1,6 @@
 // app/page.tsx
+import HomepageWrapper from '@/components/layout/HomepageWrapper';
 import Homepage from '@/components/Homepage';
-
 export default function Home() {
-
-  return <Homepage />;
+  return <HomepageWrapper><Homepage /></HomepageWrapper>;
 }

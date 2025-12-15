@@ -19,4 +19,33 @@ body {
     @apply w-[96%] max-w-[1700px] mx-auto;
   }
 }
+@layer components {
+
+  /* NORMAL SECTIONS */
+  .section-spacing {
+    @apply 
+      py-16 
+      sm:py-20 
+      md:py-24 
+      lg:py-28;
+  }
+
+  /* HERO / BIG SECTIONS */
+  .section-spacing-lg {
+    @apply 
+      py-20 
+      sm:py-28 
+      md:py-32 
+      lg:py-36;
+  }
+
+  /* SMALL SECTIONS */
+  .section-spacing-sm {
+    @apply 
+      py-10 
+      sm:py-12 
+      md:py-16;
+  }
+}
+
 

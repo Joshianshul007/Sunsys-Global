@@ -1,8 +1,7 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState, useEffect } from "react";
-import ForEngineers from "./homepageComponents/ForEngineers";
 
 const jobs = [
   {
@@ -27,55 +26,30 @@ const jobs = [
   },
 ];
 
-export default function EngineerSection() {
+export default function FeaturedOpenings() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  // 🔁 Auto slide (optional)
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % jobs.length);
-    }, 3000);
+    }, 3500);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section className="w-full bg-[#0B0E11] text-white py-28">
-      <div className="w-[90%] max-w-7xl mx-auto text-center">
+    <section className="w-full py-24 text-white">
+      <div className="section-container">
 
         {/* HEADING */}
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-          Build Your <span className="text-blue-500">Global Tech Career</span>
-        </h2>
-
-        <p className="text-lg md:text-xl text-white/70 max-w-3xl mx-auto leading-relaxed mb-12">
-          We help Indian engineers of all levels access remote international roles,
-          relocation opportunities, and exciting startup engineering positions —
-          across the US, Europe, Middle East & beyond.
-        </p>
-
-        {/* BUTTONS */}
-        <div className="flex justify-center gap-6 mb-20">
-          <Link
-            href="/Apply"
-            className="bg-blue-600 hover:bg-blue-700 text-lg px-10 py-4 rounded-xl shadow-lg"
-          >
-            Apply Now
-          </Link>
-
-          <Link
-            href="/TalentCommunity"
-            className="border border-white/20 text-lg px-10 py-4 rounded-xl bg-[#0B0E11] hover:bg-white/10"
-          >
-            Join Talent Community
-          </Link>
-        </div>
-
-        {/* FEATURED OPENINGS */}
-        <h3 className="text-2xl md:text-3xl font-bold mb-8">Featured Openings</h3>
+        <h3 className="text-2xl md:text-3xl font-bold mb-8">
+          Featured Openings
+        </h3>
 
         <div className="relative w-full max-w-7xl mx-auto">
 
-          {/* ⭐ PREMIUM FINTECH CARD ⭐ */}
+          {/* ⭐ PREMIUM CARD */}
           <div
             className="
               relative overflow-hidden rounded-3xl p-8 
@@ -93,7 +67,7 @@ export default function EngineerSection() {
             {/* GLOW BOTTOM LEFT */}
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 blur-3xl rounded-full opacity-20" />
 
-            {/* GLASS SHINE OVERLAY */}
+            {/* GLASS SHINE */}
             <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent pointer-events-none" />
 
             {/* IMAGE */}
@@ -102,6 +76,7 @@ export default function EngineerSection() {
               alt={jobs[currentIndex].title}
               width={1600}
               height={800}
+              priority
               className="
                 relative z-10 rounded-2xl object-cover mb-6 
                 h-[450px] w-full
@@ -113,14 +88,16 @@ export default function EngineerSection() {
 
             {/* TEXT */}
             <div className="relative z-10">
-              <h4 className="text-3xl font-bold mb-3 text-white drop-shadow-md">
+              <h4 className="text-3xl font-bold mb-3 drop-shadow-md">
                 {jobs[currentIndex].title}
               </h4>
-              <p className="text-white/70 text-lg">{jobs[currentIndex].location}</p>
+              <p className="text-white/70 text-lg">
+                {jobs[currentIndex].location}
+              </p>
             </div>
           </div>
 
-          {/* DOT INDICATORS (UPGRADED) */}
+          {/* DOT INDICATORS */}
           <div className="flex justify-center gap-3 mt-6 relative z-20">
             {jobs.map((_, index) => (
               <button
@@ -128,9 +105,11 @@ export default function EngineerSection() {
                 onClick={() => setCurrentIndex(index)}
                 className={`
                   h-3 w-3 rounded-full transition-all duration-300 
-                  ${currentIndex === index
-                    ? "bg-blue-500 scale-150 shadow-[0_0_10px_rgba(37,99,235,0.9)]"
-                    : "bg-white/20 hover:bg-white/40"}
+                  ${
+                    currentIndex === index
+                      ? "bg-blue-500 scale-150 shadow-[0_0_10px_rgba(37,99,235,0.9)]"
+                      : "bg-white/20 hover:bg-white/40"
+                  }
                 `}
               />
             ))}
@@ -138,8 +117,6 @@ export default function EngineerSection() {
 
         </div>
       </div>
-      
     </section>
-    
   );
 }
