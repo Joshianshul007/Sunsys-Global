@@ -20,7 +20,7 @@ export default function ForEngineers() {
 
           <div className="flex flex-wrap justify-center gap-4 mt-10">
             <Link
-              href="/Apply"
+              href="/contact"
               className="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl text-base md:text-lg"
             >
               Apply Now
