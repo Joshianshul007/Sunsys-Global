@@ -1,29 +1,38 @@
 "use client";
 
 import Image from "next/image";
+import { Dispatch, SetStateAction } from "react";
 
-export default function Hero() {
+type HeroProps = {
+  setShowSidebar?: Dispatch<SetStateAction<boolean>>;
+};
+
+export default function Hero({ setShowSidebar }: HeroProps) {
   return (
     <section className="relative w-full overflow-hidden">
-      
+
       {/* BACKGROUND */}
-      <div className="
-        absolute inset-0
-        bg-[radial-gradient(ellipse_at_top,_rgba(79,139,255,0.15),transparent_60%)]
-        bg-[#070B12]
-      " />
+      <div
+        className="
+          absolute inset-0
+          bg-[radial-gradient(ellipse_at_top,_rgba(79,139,255,0.15),transparent_60%)]
+          bg-[#070B12]
+        "
+      />
 
       {/* CONTENT */}
-      <div className="
-        relative
-        section-container
-        min-h-[90vh]
-        grid grid-cols-1 lg:grid-cols-2
-        items-center
-        gap-16
-        pt-32
-      ">
-        
+      <div
+        className="
+          relative
+          section-container
+          min-h-[90vh]
+          grid grid-cols-1 lg:grid-cols-2
+          items-center
+          gap-16
+          pt-32
+        "
+      >
+
         {/* LEFT */}
         <div>
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight">
@@ -44,9 +53,13 @@ export default function Hero() {
 
           {/* CTAs */}
           <div className="mt-8 flex flex-wrap gap-4">
-            <button className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold">
+            <button
+              onClick={() => setShowSidebar?.(true)}
+              className="bg-blue-600 hover:bg-blue-500 px-6 py-3 rounded-xl font-semibold"
+            >
               Hire Engineering Talent
             </button>
+
             <button className="border border-white/20 hover:border-white/40 px-6 py-3 rounded-xl font-semibold">
               Apply for Global Roles
             </button>
